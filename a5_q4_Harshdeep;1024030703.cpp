@@ -34,6 +34,7 @@ void reverse() {
     Node* prev = NULL;
     Node* curr = head;
     Node* next = NULL;
+    cout<<"reversed list:"<<endl;
     while(curr != NULL) {
         next = curr->next;
         curr->next = prev;
@@ -45,6 +46,7 @@ void reverse() {
 
 int main() {
     int n, val;
+    cout<<"enter the size of the list"<<endl;
     cin >> n;
     for(int i=0;i<n;i++) {
         cin >> val;
@@ -54,4 +56,3 @@ int main() {
     display();
     return 0;
 }
-
