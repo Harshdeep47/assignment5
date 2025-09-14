@@ -28,17 +28,19 @@ void findMiddle() {
         slow = slow->next;
         fast = fast->next->next;
     }
-    if(slow != NULL) cout << slow->data << endl;
+    if(slow != NULL){
+	 cout <<"middle of list is:"<< slow->data << endl;
+   }
 }
 
 int main() {
     int n, val;
+    cout<<"enter the size of list"<<endl;
     cin >> n;
     for(int i=0;i<n;i++) {
         cin >> val;
         insertEnd(val);
     }
-    findMiddle();
+	findMiddle();
     return 0;
 }
-
