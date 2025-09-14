@@ -9,13 +9,16 @@ struct Node {
 Node* head = NULL;
 
 void insertAtBeginning(int val) {
+    cout<<"enter the number"<<endl;
     Node* newNode = new Node();
     newNode->data = val;
     newNode->next = head;
     head = newNode;
+    cout<<"insertion succesfull"<<endl;
 }
 
 void insertAtEnd(int val) {
+    cout<<"enter the number"<<endl;
     Node* newNode = new Node();
     newNode->data = val;
     newNode->next = NULL;
@@ -26,9 +29,11 @@ void insertAtEnd(int val) {
     Node* temp = head;
     while(temp->next != NULL) temp = temp->next;
     temp->next = newNode;
+    cout<<"insertion succesfull"<<endl;
 }
 
 void insertAfter(int key, int val) {
+    cout<<"enter the number"<<endl;
     Node* temp = head;
     while(temp != NULL && temp->data != key) temp = temp->next;
     if(temp == NULL) return;
@@ -36,9 +41,11 @@ void insertAfter(int key, int val) {
     newNode->data = val;
     newNode->next = temp->next;
     temp->next = newNode;
+    cout<<"insertion succesfull"<<endl;
 }
 
 void insertBefore(int key, int val) {
+    cout<<"enter the number"<<endl;
     if(head == NULL) return;
     if(head->data == key) {
         insertAtBeginning(val);
@@ -51,6 +58,7 @@ void insertBefore(int key, int val) {
     newNode->data = val;
     newNode->next = temp->next;
     temp->next = newNode;
+    cout<<"insertion succesfull"<<endl;
 }
 
 void deleteBeginning() {
@@ -58,6 +66,7 @@ void deleteBeginning() {
     Node* temp = head;
     head = head->next;
     delete temp;
+    cout<<"deletion succesfull"<<endl;
 }
 
 void deleteEnd() {
@@ -71,6 +80,7 @@ void deleteEnd() {
     while(temp->next->next != NULL) temp = temp->next;
     delete temp->next;
     temp->next = NULL;
+    cout<<"deletion succesfull"<<endl;
 }
 
 void deleteSpecific(int key) {
@@ -85,6 +95,7 @@ void deleteSpecific(int key) {
     Node* delNode = temp->next;
     temp->next = temp->next->next;
     delete delNode;
+    cout<<"deletion succesfull"<<endl;
 }
 
 void search(int key) {
@@ -104,6 +115,7 @@ void search(int key) {
 void display() {
     Node* temp = head;
     while(temp != NULL) {
+        cout<<"your list is"<<endl;
         cout << temp->data << " ";
         temp = temp->next;
     }
@@ -129,4 +141,5 @@ int main() {
         }
     }
 }
+
 
