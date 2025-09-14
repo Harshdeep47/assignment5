@@ -23,6 +23,7 @@ void insertEnd(int val) {
 
 void display() {
     Node* temp = head;
+    cout<<"your list is"<<endl;
     while(temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
@@ -53,13 +54,14 @@ void countAndDelete(int key) {
 
 int main() {
     int n, val, key;
+    cout<<"enter the size of list"<<endl;
     cin >> n;
     for(int i=0;i<n;i++) {
         cin >> val;
         insertEnd(val);
     }
+    cout<<"enter the key"<<endl;
     cin >> key;
     countAndDelete(key);
     return 0;
 }
-
